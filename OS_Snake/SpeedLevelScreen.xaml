@@ -1,0 +1,57 @@
+﻿<Window x:Class="OS_Snake.SpeedLevelScreen"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:OS_Snake"
+        mc:Ignorable="d"
+       Title="Zorluk Seçimi" Height="250" Width="400" WindowStyle="None" ResizeMode="NoResize" WindowStartupLocation="CenterScreen">
+    <Window.Background>
+        <ImageBrush ImageSource="images/Backgrounds/SpeedLevelScreen/Background_2.jpg"/>
+    </Window.Background>
+    <Grid>
+
+        <Grid x:Name="NormalHassle" HorizontalAlignment="Left" VerticalAlignment="Center" Margin="15,0,0,0">
+            <StackPanel Orientation="Vertical">
+                <Viewbox Height="40" HorizontalAlignment="Left" Margin="0,0,0,5">
+                    <RadioButton x:Name="EasySelect" Checked="EasySelect_Checked">
+                        <TextBlock FontFamily="Forte" Foreground="Green" Text="Yavaş"/>
+                    </RadioButton>
+                </Viewbox>
+                <Viewbox Height="40" HorizontalAlignment="Left">
+                    <RadioButton x:Name="NormalSelect" Checked="NormalSelect_Checked">
+                        <TextBlock FontFamily="Forte" Foreground="Blue" Text="Normal"/>
+                    </RadioButton>
+                </Viewbox>
+                <Viewbox Height="40" HorizontalAlignment="Left" Margin="0,5,0,0">
+                    <RadioButton x:Name="HardSelect" Checked="HardSelect_Checked">
+                        <TextBlock FontFamily="Forte" Foreground="Purple" Text="Hızlı"/>
+                    </RadioButton>
+                </Viewbox>
+            </StackPanel>
+        </Grid>
+
+        <Grid x:Name="EventHassle" HorizontalAlignment="Right" VerticalAlignment="Center" Margin="0,0,15,0">
+            <StackPanel Orientation="Vertical">
+                <Viewbox Height="40" HorizontalAlignment="Left" Margin="0,0,0,5">
+                    <RadioButton x:Name="Hard2Select" Checked="Hard2Select_Checked">
+                        <TextBlock FontFamily="Forte" Foreground="DarkRed" Text="Çok Hızlı"/>
+                    </RadioButton>
+                </Viewbox>
+                <Viewbox Height="40" HorizontalAlignment="Left">
+                    <RadioButton x:Name="LegendarySelect" Checked="LegendarySelect_Checked">
+                        <TextBlock FontFamily="Forte" Foreground="DarkGoldenrod" Text="Efsanevi"/>
+                    </RadioButton>
+                </Viewbox>
+                <Viewbox Height="40" HorizontalAlignment="Left" Margin="0,5,0,0">
+                    <RadioButton x:Name="ImpossibleSelect" Checked="ImpossibleSelect_Checked">
+                        <TextBlock FontFamily="Forte" Foreground="Black" Text="imkansız"/>
+                    </RadioButton>
+                </Viewbox>
+            </StackPanel>
+        </Grid>
+
+        <Image x:Name="CloseIcon" Cursor="Hand" Height="30" Width="30" Source="images/Icons/Close.png" HorizontalAlignment="Right" VerticalAlignment="Top" Margin="0,10,10,0" MouseLeftButtonUp="CloseIcon_MouseLeftButtonUp" />
+
+    </Grid>
+</Window>

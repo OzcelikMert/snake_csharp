@@ -1,0 +1,37 @@
+﻿<Window x:Class="OS_Snake.MainPage"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:OS_Snake"
+        mc:Ignorable="d"
+         Title="Anasayfa" MinHeight="420" Height="450" MaxHeight="500" MinWidth="750" Width="800" MaxWidth="850" WindowStartupLocation="CenterScreen" Closing="Window_Closing" Loaded="Window_Loaded">
+    <Window.Background>
+        <ImageBrush ImageSource="images/Backgrounds/MainPage/Background_1.jpg"/>
+    </Window.Background>
+    <Grid>
+        <Button Click="OnePlayer_Game_Click" Cursor="Hand" x:Name="OnePlayer_Game" Opacity="0.8" Width="140" Height="100" HorizontalAlignment="Left" VerticalAlignment="Center" Margin="100,0,0,0" Background="#FF86FFFA">
+            <StackPanel Orientation="Vertical">
+                <Image Source="images/Icons/OnePlayer.png" Width="58" Height="50" HorizontalAlignment="Center" Margin="0,0,0,5" />
+                <TextBlock Foreground="Black" Text="1 Oyuncu" FontFamily="Agent Orange Bold" FontSize="10" HorizontalAlignment="Center" Margin="0,0,0,0"></TextBlock>
+            </StackPanel>
+        </Button>
+        <Button x:Name="Settings" Click="Settings_Click" Opacity="0.8" Cursor="Hand" Width="140" Height="100" HorizontalAlignment="Right" VerticalAlignment="Center" Margin="0,0,100,0" Background="#FFA9FF80">
+            <StackPanel Orientation="Vertical">
+                <Image Source="images/Icons/Settings.png" Width="40" Height="40" HorizontalAlignment="Center" Margin="0,0,0,5" />
+                <TextBlock Foreground="Black" Text="Ayarlar" FontFamily="Agent Orange Bold" FontSize="10" HorizontalAlignment="Center" VerticalAlignment="Top" Margin="0,0,0,0"></TextBlock>
+            </StackPanel>
+
+        </Button>
+        <Button Click="MultiPlayer_Game_Click" x:Name="MultiPlayer_Game" Opacity="0.8" Width="140" Cursor="Hand" Height="100" HorizontalAlignment="Center" VerticalAlignment="Center" Margin="0,0,0,0" Background="#FFD1B3F5">
+            <StackPanel Orientation="Vertical">
+                <Image Source="images/Icons/TwoPlayer.png" Width="58" Height="50" HorizontalAlignment="Center" Margin="0,0,0,5" />
+                <TextBlock Foreground="Black" Text="Çok Oyunculu" FontFamily="Agent Orange Bold" FontSize="10" HorizontalAlignment="Right" Margin="0,0,0,0"></TextBlock>
+            </StackPanel>
+
+        </Button>
+        
+    </Grid>
+</Window>
+
+
